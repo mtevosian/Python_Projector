@@ -14,10 +14,7 @@ class Book(Product):
         self.author = author
 
     def read(self):
-        print(self.name)
-        print(self.price)
-        print(self.quantity)
-        print(self.author)
+        return f"{self.name}, {self.price}, {self.quantity}, {self.author}"
 
 
 book = Book("Bible", 500, 10000, "Jesus")
@@ -53,8 +50,8 @@ class FastFood(Restaurant):
         else:
             menu[name]['quantity'] -= quantity
 
-        total_cost = quantity * (menu[name]['price'])
-        return total_cost
+        self.total_cost = quantity * (menu[name]['price'])
+        return self.total_cost
 
 
 menu = {
