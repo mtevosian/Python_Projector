@@ -9,8 +9,8 @@ from sqlalchemy import create_engine
 connection = psycopg2.connect(
     host='localhost',
     database='postgres',
-    user='postgres',
-    password='masyas',
+    user='user',
+    password='password',
     port=5432,
 )
 
@@ -55,8 +55,8 @@ engine = create_engine(
     DATABASE_URI.format(
         host='localhost',
         database='postgres',
-        user='postgres',
-        password='masyas',
+        user='user',
+        password='password',
         port=5432,
     )
 )
